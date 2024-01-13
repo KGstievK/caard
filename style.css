@@ -83,7 +83,7 @@ a {
 transform: translate(-50%);
 }
 .block {
-  height: 400px;
+  height: 460px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -99,31 +99,82 @@ transform: translate(-50%);
   width: 298px;
   height: 141px;
   border-radius: 15px;
-  background: url(/img/Gousian\ Layer.png) no-repeat;
+  background: transparent;
 }
-.info_block1 {
-  padding: 25px 25px;
-  width: 298px;
-  height: 141px;
-  border-radius: 15px;
-  background: url(/img/Group\ 11.png) no-repeat;
-}
+
 .logo_icon {
   display: flex;
   align-items: center;
   gap: 191px;
 }
 .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50px;
   height: 50px;
-  background: url(/img/Logo.png);
+}
+.icon {
+  display: flex;
+  align-items: center;
+}
+.logo_card {
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  transition: .6s;
+}
+.master_bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 60px;
+  background: url(/img/Gousian.png) no-repeat center;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: .2s;
+}
+.master_bg:hover {
+  border: 2px solid#F90;
+}
+
+.master_card {
+  width: 50px;
+  height: 50px;
+  background: url(/img/Logo.png) no-repeat;
+}
+
+.visa_bg {
+  width: 80px;
+  height: 60px;
+  background: url(/img/Group11.png) no-repeat center;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  transition: .2s;
+}
+.visa_bg:hover {
+  border: 2px solid#F90;
+}
+.visa_card {
+  width: 50px;
+  height: 50px;
+  background: url(/img/Logo1.png) no-repeat;
+
 }
 
 .icon ion-icon {
   width: 25px;
   height: 25px;
+  color: #FFF;
+  transition: .3s;
 }
-
+.icon ion-icon:hover {
+  color: #000
+}
 .number_card {
   color: #FFF;
   font-family: Montserrat;
@@ -174,14 +225,14 @@ p {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 195px;
+  height: 100px;
 }
-.checkout_btn{
+.checkout_btn {
   width: 196px;
   height: 50px;
   border-radius: 40px;
   background: #F00;
-  border: #F00;
+  border: 2px solid #F00;
   color: #FFF;
   text-align: center;
   font-size: 18px;
@@ -189,8 +240,14 @@ p {
   line-height: 24.519px; /* 136.216% */
   letter-spacing: 0.54px;
   text-transform: uppercase;
+  transition: .3s;
+  cursor: pointer;
 }
-
+.checkout_btn:hover {
+  border: 2px solid #F00;
+  background: transparent;
+  color: #F00;
+}
 .add_new_card {
   margin: 90px 0;
 }
@@ -203,7 +260,7 @@ form {
   flex-direction: column;
   gap: 35px;
   width: 301px;
-  height: 430px;
+  height: auto;
   border-radius: 15px;
   background: #FFF;
   padding: 25px;
@@ -246,25 +303,27 @@ input {
   font-weight: 600;
   text-transform: uppercase;
 }
-#name_card {
-  border-bottom: 2px solid rgba(255, 0, 0, 0.701);
+
+.name_card {
+  border-bottom: 2px solid rgba(73, 73, 73, 0.25);
   width: 100%;
   height: 25px;
 }
-#num_card {
-  border-bottom: 2px solid rgba(255, 0, 0, 0.701);
+.num_card {
+  border-bottom: 2px solid rgba(73, 73, 73, 0.25);
   width: 100%;
   height: 25px;
 }
-#data_card {
-  border-bottom: 2px solid rgba(255, 0, 0, 0.701);
+.data_card {
+  border-bottom: 2px solid rgba(73, 73, 73, 0.25);
   width: 100%;
   height: 25px;
 }
-#cvv_card {
-  border-bottom: 2px solid rgba(255, 0, 0, 0.701);
+.cvv_card {
+  border-bottom: 2px solid rgba(73, 73, 73, 0.25);
   width: 100%;
   height: 25px;
+  order: 3;
 }
 
 
@@ -291,14 +350,14 @@ input {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 190px;
+  height: 298px;
 }
 .add {
   width: 196px;
   height: 50px;
   border-radius: 40px;
   background: #F90;
-  border: #F90;
+  border: 2px solid #F90;
   color: #FFF;
   text-align: center;
   font-size: 18px;
@@ -306,6 +365,12 @@ input {
   line-height: 24.519px; /* 136.216% */
   letter-spacing: 0.54px;
   text-transform: uppercase;
+  transition: .3s;
+  cursor: pointer;
+}
+.add:hover {
+  background: transparent;
+  color: #F90;
 }
 .save_card {
   display: none;
@@ -321,19 +386,20 @@ input {
   line-height: 24.519px; /* 136.216% */
   letter-spacing: 0.54px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .data{
   color: #FFF;
-font-family: Montserrat;
-font-size: 16px;
-font-weight: 600;
-text-transform: uppercase;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 .name{
   color: #FFF;
-font-family: Montserrat;
-font-size: 16px;
-font-weight: 600;
-text-transform: uppercase;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
